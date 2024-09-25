@@ -3,13 +3,15 @@ import { NextRequest, NextResponse } from "next/server";
 const data = [
     {
         id: 1,
-        name : "sepatu",
+        title : "sepatu",
         price : "100000",
+        image : "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQDlubkP07teUPiSYrFJaNuOX71RuHpoBBNSROx-WK74qmIAKQS502eULRMU5MyLipu8wFG9cSc8CxtNfjxBT8CicWdFJW31TLz6houO8s&usqp=CAE"
     },
     {
         id: 2,
-        name : "baju",
+        title : "baju",
         price : "900000",
+        image : "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS7nJCmPn_nlt1MThULp50E8aH7iB58Cq-hGrLNW4oNyIkCwnuASTefJzUMG2cw6O9g6NXoSaPUfEjjSeftq289DT999VvIZ-2AXAo-bGVACWzE1SnPlKS1O90&usqp=CAE"
     },
 ];
 
