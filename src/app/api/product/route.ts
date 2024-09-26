@@ -13,6 +13,12 @@ const data = [
         price : "900000",
         image : "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS7nJCmPn_nlt1MThULp50E8aH7iB58Cq-hGrLNW4oNyIkCwnuASTefJzUMG2cw6O9g6NXoSaPUfEjjSeftq289DT999VvIZ-2AXAo-bGVACWzE1SnPlKS1O90&usqp=CAE"
     },
+    {
+        id: 3,
+        title : "baju",
+        price : "900000",
+        image : "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS7nJCmPn_nlt1MThULp50E8aH7iB58Cq-hGrLNW4oNyIkCwnuASTefJzUMG2cw6O9g6NXoSaPUfEjjSeftq289DT999VvIZ-2AXAo-bGVACWzE1SnPlKS1O90&usqp=CAE"
+    },
 ];
 
 export async function GET(request : NextRequest){

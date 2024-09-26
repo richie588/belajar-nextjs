@@ -2,8 +2,14 @@ import Link from "next/link";
 type ProductPageProps = { params: { slug: string[] } }
 
 async function getData(){
-    const res = await fetch ("https://fakestoreapi.com/products");
-    // const res = await fetch ("http://localhost:3000/api/product", {cache:"no-store"});  //ngambil dari local
+    // const res = await fetch ("https://fakestoreapi.com/products");
+    const res = await fetch ("http://localhost:3000/api/product", 
+    {cache:"force-cache",
+    next:{
+        // revalidate:30,
+        tags:['product'],   
+    },
+    });     
     
     if(!res.ok){
         throw new Error("failded to req data");
@@ -20,8 +26,8 @@ export default async function ProductPage(props: ProductPageProps) {
         <div className="grid grid-cols-3 pt-2 pb-2 my-3 place-items-center">
           {/* {products.data.length > 0 && (
             products.data.map((product : any) => ( */}
-            {products.length > 0 && (
-            products.map((product : any) => (
+            {products.data.length > 0 && (
+            products.data.map((product : any) => (
         <div 
         key = {product.id}
         className="w-full max-w-sm mx-2 my-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
